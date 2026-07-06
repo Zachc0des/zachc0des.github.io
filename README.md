@@ -1,6 +1,6 @@
 # Zachary Frederic
 
-> IT Professional · Developer · Creative Technologist · Orlando, FL
+> IT Professional · Developer · Creative Technologist · Orlando, FL | Palm Beach, Fl
 
 ---
 
