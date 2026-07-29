@@ -46,5 +46,5 @@
 
 ### Connect
 
-📧 zfrederic00@outlook.com · 📱 561-701-3687  
+📧 zfrederic00@outlook.com ·  
 🌐 [zachc0des.github.io](https://Zachc0des.github.io) · 💻 [github.com/Zachc0des](https://github.com/Zachc0des)
