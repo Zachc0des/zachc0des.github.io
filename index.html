@@ -129,6 +129,10 @@
     .nav-links a.health-link::after { background: var(--iron); }
     .nav-links a.health-link:hover { color: #6b1a1a; }
 
+    .nav-links a.study-link { color: var(--cobalt); }
+    .nav-links a.study-link::after { background: var(--cobalt); }
+    .nav-links a.study-link:hover { color: var(--cobalt-dark); }
+
     /* ─── HERO ─── */
     #home {
       min-height: 100vh;
@@ -763,7 +767,7 @@
     }
 
     /* Cobalt variant — Zach/C0des study library callout */
-    .zjim.zcodes { margin-top: 44px; }
+    .zjim.zcodes { margin-top: 44px; scroll-margin-top: 100px; }
     .zjim.zcodes::before { background: var(--cobalt); }
     .zjim.zcodes .zjim-eyebrow { color: var(--cobalt); }
 
@@ -884,6 +888,7 @@
     <li><a href="#ai">AI Stack</a></li>
     <li><a href="#certifications">Certifications</a></li>
     <li><a href="#fitness" class="health-link">Health &amp; Fitness</a></li>
+    <li><a href="#study-library" class="study-link">Study Library</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -1381,7 +1386,7 @@
   </div>
 
   <!-- ZACH/C0DES CALLOUT -->
-  <div class="zjim zcodes">
+  <div class="zjim zcodes" id="study-library">
     <div>
       <div class="zjim-eyebrow">Featured Site</div>
       <h3 class="zjim-title">Zach/<em>C0des</em></h3>
