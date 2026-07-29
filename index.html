@@ -23,6 +23,8 @@
       --tag-border: #c4c4c4;
       --tag-color: #555;
       --iron: #8b2c2c;
+      --cobalt: #1e44c2;
+      --cobalt-dark: #142e8a;
       --ease: cubic-bezier(0.22, 1, 0.36, 1);
     }
 
@@ -237,6 +239,16 @@
 
     .btn-iron:hover {
       background: var(--iron);
+      color: #fff;
+    }
+
+    .btn-cobalt {
+      border: 1px solid var(--cobalt);
+      color: var(--cobalt);
+    }
+
+    .btn-cobalt:hover {
+      background: var(--cobalt);
       color: #fff;
     }
 
@@ -682,7 +694,7 @@
       color: var(--accent);
     }
 
-    /* ─── ZJIM CALLOUT ─── */
+    /* ─── ZJIM / FEATURED CALLOUTS ─── */
     .zjim {
       margin-top: 1px;
       border: 1px solid var(--border);
@@ -749,6 +761,11 @@
       letter-spacing: 0.18em;
       color: var(--dim);
     }
+
+    /* Cobalt variant — Zach/C0des study library callout */
+    .zjim.zcodes { margin-top: 44px; }
+    .zjim.zcodes::before { background: var(--cobalt); }
+    .zjim.zcodes .zjim-eyebrow { color: var(--cobalt); }
 
     /* ─── CONTACT ─── */
     .contact-row {
@@ -882,6 +899,7 @@
   <div class="hero-links">
     <a href="#projects" class="btn btn-outline">View Work</a>
     <a href="https://zachc0des.github.io/zjim/" target="_blank" rel="noopener" class="btn btn-iron">Z.JIM — Training Log ↗</a>
+    <a href="https://zachc0des.github.io/Zachc0des-Portfolio/#/" target="_blank" rel="noopener" class="btn btn-cobalt">Zach/C0des — Study Library ↗</a>
     <a href="https://github.com/Zachc0des" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
   </div>
 </div>
@@ -1361,6 +1379,31 @@
       <span class="project-arrow">→</span>
     </div>
   </div>
+
+  <!-- ZACH/C0DES CALLOUT -->
+  <div class="zjim zcodes">
+    <div>
+      <div class="zjim-eyebrow">Featured Site</div>
+      <h3 class="zjim-title">Zach/<em>C0des</em></h3>
+      <p class="zjim-desc">
+        My public notebook — a searchable library of study guides, references, and tutorials
+        written by hand while working through IT, networking, cybersecurity, and web development.
+        Everything renders straight from markdown: search it, open it, copy what you need.
+        Built and maintained as I learn, free for anyone on the same path.
+      </p>
+      <div class="skill-tags">
+        <span class="tag">Study Guides</span>
+        <span class="tag">IT &amp; Networking</span>
+        <span class="tag">Cybersecurity</span>
+        <span class="tag">Web Development</span>
+        <span class="tag">Markdown</span>
+      </div>
+    </div>
+    <div class="zjim-cta">
+      <a href="https://zachc0des.github.io/Zachc0des-Portfolio/#/" target="_blank" rel="noopener" class="btn btn-cobalt">Open Zach/C0des ↗</a>
+      <span class="zjim-url">zachc0des.github.io/Zachc0des-Portfolio</span>
+    </div>
+  </div>
 </section>
 
 <!-- AI STACK -->
@@ -1579,6 +1622,9 @@
       <a href="https://github.com/Zachc0des" target="_blank" rel="noopener" class="contact-link">
         <span>GITHUB</span> github.com/Zachc0des
       </a>
+      <a href="https://zachc0des.github.io/Zachc0des-Portfolio/#/" target="_blank" rel="noopener" class="contact-link">
+        <span>ZACH/C0DES</span> zachc0des.github.io/Zachc0des-Portfolio
+      </a>
       <a href="https://zachc0des.github.io/zjim/" target="_blank" rel="noopener" class="contact-link">
         <span>Z.JIM</span> zachc0des.github.io/zjim
       </a>
@@ -1591,7 +1637,7 @@
 
 <footer>
   <span>© 2026 Zachary Frederic</span>
-  <span>IT · Design · Development · <a href="https://zachc0des.github.io/zjim/" target="_blank" rel="noopener">Z.JIM</a></span>
+  <span>IT · Design · Development · <a href="https://zachc0des.github.io/Zachc0des-Portfolio/#/" target="_blank" rel="noopener">Zach/C0des</a> · <a href="https://zachc0des.github.io/zjim/" target="_blank" rel="noopener">Z.JIM</a></span>
 </footer>
 
 <script>
