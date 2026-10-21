@@ -779,6 +779,20 @@
       z-index: 1;
     }
 
+    /* ─── SQL LOGO (database cylinder + query cursor) ─── */
+    .ai-logo {
+      display: block;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 18px;
+      color: var(--cobalt);
+      position: relative;
+      z-index: 1;
+      transition: transform 0.5s var(--ease), color 0.3s var(--ease);
+    }
+    .ai-logo svg { width: 100%; height: 100%; display: block; }
+    .cell:hover .ai-logo { transform: translateY(-3px); color: var(--cobalt-dark); }
+
     .ai-name {
       font-family: 'Cormorant Garamond', serif;
       font-size: 26px;
@@ -824,6 +838,27 @@
       color: var(--dim);
       margin-bottom: 10px;
     }
+
+    /* ─── SQL QUERY SNIPPET ─── */
+    .sql-snippet {
+      margin-top: 20px;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--cobalt);
+      background: var(--panel-bg);
+      font-size: 10px;
+      line-height: 1.9;
+      letter-spacing: 0.04em;
+      color: var(--grey);
+      position: relative;
+      z-index: 1;
+      white-space: pre-wrap;
+      overflow-x: auto;
+    }
+
+    .sql-snippet .kw { color: var(--cobalt); }
+    .sql-snippet .fn { color: var(--amber); }
+    .sql-snippet .str { color: var(--green); }
 
     /* ─── CERTIFICATIONS ─── */
     .cert-list {
@@ -1768,7 +1803,7 @@
   <div class="art art-abs art-callout" data-art="chevrons" aria-hidden="true"></div>
   <div class="section-label">04 — Code Stack</div>
 
-  <div class="grid-frame cols-2">
+  <div class="grid-frame cols-3">
     <div class="cell ai-card">
       <span class="ai-icon">‹/›</span>
       <div class="ai-name">HTML/CSS</div>
@@ -1782,6 +1817,39 @@
       <div class="ai-name">Python</div>
       <div class="ai-uses">
         <div class="ai-use-item">Scripting &amp; automation</div>
+      </div>
+    </div>
+
+    <div class="cell ai-card" id="sql">
+      <span class="ai-logo" role="img" aria-label="SQL database logo">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- database cylinder -->
+          <ellipse cx="22" cy="10" rx="14" ry="5"/>
+          <path d="M8 10v10c0 2.8 6.3 5 14 5s14-2.2 14-5V10"/>
+          <path d="M8 20v10c0 2.8 6.3 5 14 5 2.2 0 4.2-.2 6-.5"/>
+          <path d="M8 30v8c0 2.8 6.3 5 14 5 3 0 5.7-.4 7.8-1"/>
+          <!-- query cursor / magnifier -->
+          <circle cx="36" cy="33" r="6"/>
+          <path d="M40.5 37.5L45 42"/>
+        </svg>
+      </span>
+      <div class="ai-name">SQL</div>
+      <div class="ai-uses">
+        <div class="ai-use-item">Queries &amp; data requests</div>
+        <div class="ai-use-item">Filtering, joins &amp; aggregates</div>
+        <div class="ai-use-item">Log &amp; security data analysis</div>
+      </div>
+      <pre class="sql-snippet" aria-label="Example SQL query"><span class="kw">SELECT</span> ip_address, <span class="fn">COUNT</span>(*) <span class="kw">AS</span> attempts
+<span class="kw">FROM</span> login_log
+<span class="kw">WHERE</span> status = <span class="str">'FAILED'</span>
+<span class="kw">GROUP BY</span> ip_address
+<span class="kw">ORDER BY</span> attempts <span class="kw">DESC</span>;</pre>
+      <div class="skill-tags">
+        <span class="tag">SELECT</span>
+        <span class="tag">JOIN</span>
+        <span class="tag">WHERE</span>
+        <span class="tag">GROUP BY</span>
+        <span class="tag">Queries</span>
       </div>
     </div>
   </div>
