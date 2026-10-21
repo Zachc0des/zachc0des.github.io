@@ -251,22 +251,6 @@
     .nav-links a:hover { color: var(--ink); }
     .nav-links a:hover::after { width: 100%; }
 
-    .nav-links a.health-link { color: var(--iron); }
-    .nav-links a.health-link::after { background: var(--iron); }
-    .nav-links a.health-link:hover { color: var(--iron-dark); }
-
-    .nav-links a.study-link { color: var(--cobalt); }
-    .nav-links a.study-link::after { background: var(--cobalt); }
-    .nav-links a.study-link:hover { color: var(--cobalt-dark); }
-
-    .nav-links a.cards-link { color: var(--green); }
-    .nav-links a.cards-link::after { background: var(--green); }
-    .nav-links a.cards-link:hover { color: var(--green-dark); }
-
-    .nav-links a.vault-link { color: var(--violet); }
-    .nav-links a.vault-link::after { background: var(--violet); }
-    .nav-links a.vault-link:hover { color: var(--violet-dark); }
-
     /* ─── THEME TOGGLE ─── */
     .theme-toggle {
       display: inline-flex;
@@ -783,7 +767,7 @@
       transform: translateX(5px);
     }
 
-    /* ─── AI STACK ─── */
+    /* ─── AI STACK / CODE STACK ─── */
     .ai-card { padding: 44px 36px; }
 
     .ai-icon {
@@ -1154,12 +1138,13 @@
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#code">Code Stack</a></li>
     <li><a href="#ai">AI Stack</a></li>
     <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#fitness" class="health-link">Health &amp; Fitness</a></li>
-    <li><a href="#study-library" class="study-link">Study Library</a></li>
-    <li><a href="#six-cards" class="cards-link">Six Cards</a></li>
-    <li><a href="#z-vault" class="vault-link">Zai Concepts</a></li>
+    <li><a href="#fitness">Health &amp; Fitness</a></li>
+    <li><a href="#study-library">Study Library</a></li>
+    <li><a href="#six-cards">Six Cards</a></li>
+    <li><a href="#z-vault">Zai Concepts</a></li>
     <li><a href="#contact">Contact</a></li>
     <li>
       <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
@@ -1777,10 +1762,37 @@
 
 <div class="art art-band" data-art="hatch" aria-hidden="true"></div>
 
+<!-- CODE STACK -->
+<section id="code">
+  <div class="art art-abs art-corner" data-art="polar" aria-hidden="true"></div>
+  <div class="art art-abs art-callout" data-art="chevrons" aria-hidden="true"></div>
+  <div class="section-label">04 — Code Stack</div>
+
+  <div class="grid-frame cols-2">
+    <div class="cell ai-card">
+      <span class="ai-icon">‹/›</span>
+      <div class="ai-name">HTML/CSS</div>
+      <div class="ai-uses">
+        <div class="ai-use-item">Front end development</div>
+      </div>
+    </div>
+
+    <div class="cell ai-card">
+      <span class="ai-icon">≋</span>
+      <div class="ai-name">Python</div>
+      <div class="ai-uses">
+        <div class="ai-use-item">Scripting &amp; automation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="art art-band" data-art="contour" aria-hidden="true"></div>
+
 <!-- AI STACK -->
 <section id="ai">
   <div class="art art-abs art-corner-left" data-art="rings" aria-hidden="true"></div>
-  <div class="section-label">04 — AI Stack</div>
+  <div class="section-label">05 — AI Stack</div>
 
   <div class="grid-frame cols-3">
     <div class="cell ai-card">
@@ -1825,12 +1837,12 @@
   </div>
 </section>
 
-<div class="art art-band" data-art="contour" aria-hidden="true"></div>
+<div class="art art-band" data-art="hatch" aria-hidden="true"></div>
 
 <!-- CERTIFICATIONS -->
 <section id="certifications">
   <div class="art art-abs art-corner" data-art="polar" aria-hidden="true"></div>
-  <div class="section-label">05 — Certifications</div>
+  <div class="section-label">06 — Certifications</div>
 
   <div class="cert-list">
     <div class="cert-item">
@@ -1918,7 +1930,7 @@
 <!-- HEALTH & FITNESS -->
 <section id="fitness">
   <div class="art art-abs art-corner-left" data-art="polar" aria-hidden="true"></div>
-  <div class="section-label">06 — Health &amp; Fitness</div>
+  <div class="section-label">07 — Health &amp; Fitness</div>
 
   <div class="fitness-intro">
     <h2 class="about-heading" style="font-size:34px;margin-bottom:0;">Discipline<br /><em>extends beyond the desk.</em></h2>
@@ -1989,7 +2001,7 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="art art-abs art-corner" data-art="rings" aria-hidden="true"></div>
-  <div class="section-label">07 — Contact</div>
+  <div class="section-label">08 — Contact</div>
   <div class="contact-row">
     <div>
       <h2 class="contact-heading">Let's<br /><em>connect.</em></h2>
@@ -2148,7 +2160,19 @@
     el.appendChild(s);
   }
 
-  var builders = { rings: rings, polar: polar, hatch: hatch, contour: contour, field: field };
+  /* Code chevrons — stacked < > marks, engraved like the rings */
+  function chevrons(el) {
+    var s = svg('0 0 400 400');
+    for (var i = 0; i < 8; i++) {
+      var o = i * 7;
+      var w = i % 4 === 0 ? 1.4 : 1;
+      path(s, 'M' + (130 + o) + ' 70L' + (20 + o) + ' 200L' + (130 + o) + ' 330', w);
+      path(s, 'M' + (270 - o) + ' 70L' + (380 - o) + ' 200L' + (270 - o) + ' 330', w);
+    }
+    el.appendChild(s);
+  }
+
+  var builders = { rings: rings, polar: polar, hatch: hatch, contour: contour, field: field, chevrons: chevrons };
 
   document.querySelectorAll('[data-art]').forEach(function (el) {
     var fn = builders[el.getAttribute('data-art')];
@@ -2346,14 +2370,7 @@
     });
     navLinks.forEach(function (a) {
       var isActive = a.getAttribute('href') === '#' + current;
-      if (a.classList.contains('health-link')) {
-        a.style.color = isActive ? 'var(--ghost)' : '';
-      } else if (a.classList.contains('study-link') ||
-                 a.classList.contains('cards-link') || a.classList.contains('vault-link')) {
-        a.style.color = '';
-      } else {
-        a.style.color = isActive ? 'var(--ink)' : '';
-      }
+      a.style.color = isActive ? 'var(--ink)' : '';
     });
     ticking = false;
   }
