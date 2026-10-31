@@ -77,7 +77,7 @@ The main portfolio is the entry point. Each site below is a standalone build wit
 | Anthropic | Claude 101 · AI Fluency: Framework & Foundations |
 | IBM SkillsBuild | Introduction to Data Concepts · Data Science in Our World |
 | OPAC TestGenius | Data Entry, Financial Record Keeping & Microsoft Office |
-| OSHA | 10-Hour Construction Safety |
+
 
 ---
 
